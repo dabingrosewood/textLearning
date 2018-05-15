@@ -46,7 +46,7 @@ logging.basicConfig(format='%(asctime)s : %(levelname)s : %(message)s', level=lo
 
 sentences = word2vec.LineSentence('data/in_the_name_of_people_segment.txt')
 
-model = word2vec.Word2Vec(sentences, hs=1,min_count=1,window=3,size=100)
+model = word2vec.Word2Vec(sentences, hs=1,min_count=1,window=5,size=100)
 
 req_count = 5
 for key in model.wv.similar_by_word('沙瑞金', topn =100):
